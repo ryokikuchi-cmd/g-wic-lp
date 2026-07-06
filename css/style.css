@@ -31,10 +31,6 @@ body {
   background: var(--color-white);
   line-height: 1.5;
   font-feature-settings: "palt";
-  /* 日本語の改行を文節単位で行い、行末に1文字だけ飛び出す崩れを防ぐ
-     （auto-phrase=Chromium系／text-wrap:pretty=Safari・Firefox等。未対応環境は無視され従来表示） */
-  word-break: auto-phrase;
-  text-wrap: pretty;
 }
 
 img {
