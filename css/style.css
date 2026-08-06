@@ -354,16 +354,16 @@ img {
     linear-gradient(#ffeaf6, #ffeaf6) padding-box,
     var(--grad-border-accent-153) border-box;
   box-shadow: 2px 2px 20px 0 rgba(0, 0, 0, 0.12);
-  list-style: disc;
+  list-style: none;
   list-style-position: outside;
   font-size: 14px;
   letter-spacing: 0.01em;
   line-height: 1.8;
-  text-align: justify;
+  text-align: center;
 }
 
 .vision-points li {
-  margin-inline-start: 21px;
+  margin-inline-start: 0;
 }
 
 .vision-points li:not(:last-child) {
