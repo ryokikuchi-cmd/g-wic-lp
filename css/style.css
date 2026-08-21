@@ -1300,6 +1300,7 @@ img {
 .flow-title {
   margin: 11px 0 25px;
   line-height: var(--title-lh-tight);
+  font-size: 23px;
 }
 
 .flow-divider {
