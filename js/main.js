@@ -60,4 +60,23 @@ document.addEventListener('DOMContentLoaded', function () {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  /* 応募フォーム → GAS（スプレッドシート）へ送信 → 完了ページ（Lead発火）へ遷移 */
+  var entryForm = document.querySelector('.entry-form');
+  if (entryForm) {
+    var GAS_URL = 'https://script.google.com/macros/s/AKfycbyuCtdjkmFWqeU90j5zmb3LDvU8Zso3ORdNZ3kRVPfboMxsrViixjcZfORq6ktyWRBX/exec';
+    entryForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!entryForm.checkValidity()) { entryForm.reportValidity(); return; }
+      var btn = entryForm.querySelector('.entry-submit');
+      if (btn) { btn.disabled = true; btn.textContent = '送信中…'; }
+      var body = new URLSearchParams(new FormData(entryForm));
+      body.append('page', location.href);
+      try {
+        fetch(GAS_URL, { method: 'POST', mode: 'no-cors', body: body, keepalive: true });
+      } catch (err) {}
+      /* keepaliveで送信を継続させつつ完了ページへ */
+      setTimeout(function () { window.location.href = './thanks.html'; }, 400);
+    });
+  }
 });
