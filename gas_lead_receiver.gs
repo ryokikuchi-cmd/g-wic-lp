@@ -32,8 +32,8 @@ const HEADERS = ['申込日時', 'お名前', '生年月日', '電話番号', '�
 
 const MAIL = {
   FROM_NAME: '株式会社g-wic 採用担当',
-  FROM: '',       // 例: recruit@g-wic.jp（Gmailの確認済みエイリアスのみ有効。空=所有アカウントのGmail）
-  REPLY_TO: '',   // 返信先（空=差出人と同じ）
+  FROM: 'recruit@g-wic.jp',      // 送信元アドレス（このアカウント自身 or 登録済みエイリアスであること）
+  REPLY_TO: 'recruit@g-wic.jp',  // 返信先
   SUBJECT: '【株式会社g-wic】カジュアル面談のお申し込みありがとうございます',
   BCC: ''         // 応募控えを受け取りたい場合はアドレスを設定
 };
