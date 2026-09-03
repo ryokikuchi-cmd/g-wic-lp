@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
   /* 応募フォーム → GAS（スプレッドシート）へ送信 → 完了ページ（Lead発火）へ遷移 */
   var entryForm = document.querySelector('.entry-form');
   if (entryForm) {
-    var GAS_URL = 'https://script.google.com/macros/s/AKfycbxfMBIg-uUY1caUcYukQv5xysELPPfYaS38bZ7BDgXLreITvF3DQ6sWtv8hr2ObbWVE/exec';
+    var GAS_URL = 'https://script.google.com/macros/s/AKfycbyL9sQBr0gfRZuhJfYz-JEgbl1MzK3pxlXq5dOMn1Q8Vc6zvB_0FjWsBE23mQfYVwt1eQ/exec';
     entryForm.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!entryForm.checkValidity()) { entryForm.reportValidity(); return; }
